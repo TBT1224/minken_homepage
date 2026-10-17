@@ -32,10 +32,51 @@
     .card h3 { margin:15px 0 10px; color:var(--deep); font-size:22px; }
     .card p { color:var(--muted); font-size:14px; margin:0 0 24px; }
     .card .more { color:var(--primary); font-weight:800; margin-top:auto; font-size:14px; }
-    footer { background:#f0ebea; padding:26px 0; text-align:center; color:#666; font-size:13px; }
     @media(max-width:720px) { .header-inner { padding:16px 0; flex-direction:column; gap:7px; } nav { justify-content:center; column-gap:16px; font-size:12px; } .hero { padding:70px 20px 76px; } main { padding:48px 0 65px; } .cards { grid-template-columns:1fr; } .card { min-height:200px; } }
+
+    footer {
+      background: #f0ebea;
+      padding: 40px 20px 25px;
+      text-align: center;
+      color: #626772;
+      font-size: 13px;
+    }
+
+    footer h2 {
+      font-size: 20px;
+      color: #531626;
+      margin: 0 0 10px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin: 25px 0;
+    }
+
+    .footer-links a {
+      color: #8d1730;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .copyright {
+      border-top: 1px solid #d9cecc;
+      padding-top: 20px;
+      margin-top: 25px;
+      font-size: 13px;
+    }
   </style>
 </head>
+
+
 <body>
   <header>
     <div class="shell header-inner">
@@ -85,6 +126,17 @@
       </a>
     </div>
   </main>
-  <footer><div class="shell">© 早稲田大学 民法研究会</div></footer>
+  <footer>
+    <div class="shell">
+      <h2>早稲田大学 民法研究会</h2>
+      <p>お問い合わせ・公式SNS</p>
+      <div class="footer-links">
+        <a href="minken2020.waseda@gmail.com">✉ メール</a>
+        <a href="https://x.com/USERNAME" target="_blank" rel="noopener noreferrer">X（旧Twitter）</a>
+        <a href="https://www.instagram.com/USERNAME/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+      <p class="copyright">© 早稲田大学 民法研究会</p>
+    </div>
+  </footer>
 </body>
 </html>
