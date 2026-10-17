@@ -18,10 +18,15 @@
     nav { display:flex; flex-wrap:wrap; column-gap:22px; row-gap:5px; font-size:14px; }
     nav a { text-decoration:none; color:#484148; }
     nav a:hover,nav a:focus-visible { color:var(--primary); text-decoration:underline; }
-    .hero { padding:88px 20px 94px; background:linear-gradient(130deg,#5d1428,#971a38); color:white; text-align:center; }
+    .hero { padding:45px 20px 50px; background:linear-gradient(130deg,#5d1428,#971a38); color:white; text-align:center; }
     .eyebrow { margin:0 0 14px; font-size:30px; letter-spacing:.24em; opacity:.9; font-weight:800; }
     h1 { margin:0; font-size:clamp(30px,5.2vw,52px); letter-spacing:.08em; line-height:1.45; }
     .hero p:last-child { margin:21px auto 0; max-width:660px; font-size:clamp(15px,2vw,18px); color:#f8eaf0; }
+    .hero-title-row { display:flex; align-items:center; justify-content:center; gap:30px; }
+    .hero-logo { width:160px; height:160px; border-radius:50%; object-fit:cover; background:white; border:3px solid white; flex-shrink:0; }
+    .hero-title-text { text-align:left; min-width:0; }
+    .hero-title-text .eyebrow { margin:0 0 5px; font-size:24px; letter-spacing:.08em; }
+    .hero-title-text h1 { margin:0; font-size:clamp(32px,5.2vw,52px); }
     main { padding:66px 0 90px; }
     .section-title { text-align:center; margin:0; font-size:clamp(35px,3vw,40px); color:var(--deep); }
     .section-intro { color:var(--muted); text-align:center; margin:12px auto 34px; max-width:650px; }
@@ -32,80 +37,26 @@
     .card h3 { margin:15px 0 10px; color:var(--deep); font-size:22px; }
     .card p { color:var(--muted); font-size:14px; margin:0 0 24px; }
     .card .more { color:var(--primary); font-weight:800; margin-top:auto; font-size:14px; }
-    @media(max-width:720px) { .header-inner { padding:16px 0; flex-direction:column; gap:7px; } nav { justify-content:center; column-gap:16px; font-size:12px; } .hero { padding:70px 20px 76px; } main { padding:48px 0 65px; } .cards { grid-template-columns:1fr; } .card { min-height:200px; } }
-
-    footer {
-      background: #f0ebea;
-      padding: 40px 20px 25px;
-      text-align: center;
-      color: #626772;
-      font-size: 13px;
+    footer { background:#f0ebea; padding:40px 20px 25px; text-align:center; color:#626772; font-size:13px; }
+    footer h2 { font-size:20px; color:#531626; margin:0 0 10px; }
+    .footer-links { display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin:25px 0; }
+    .footer-links a { color:#8d1730; font-size:15px; font-weight:600; text-decoration:none; }
+    .footer-links a:hover { text-decoration:underline; }
+    .copyright { border-top:1px solid #d9cecc; padding-top:20px; margin-top:25px; font-size:13px; }
+    @media(max-width:720px) {
+      .header-inner { padding:16px 0; flex-direction:column; gap:7px; }
+      nav { justify-content:center; column-gap:16px; font-size:12px; }
+      .hero { padding:35px 20px 40px; }
+      .hero-title-row { gap:14px; }
+      .hero-logo { width:100px; height:100px; }
+      .hero-title-text .eyebrow { font-size:16px; }
+      .hero-title-text h1 { font-size:clamp(24px,5vw,36px); }
+      main { padding:48px 0 65px; }
+      .cards { grid-template-columns:1fr; }
+      .card { min-height:200px; }
     }
-
-    footer h2 {
-      font-size: 20px;
-      color: #531626;
-      margin: 0 0 10px;
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin: 25px 0;
-    }
-
-    .footer-links a {
-      color: #8d1730;
-      font-size: 15px;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
-
-    .copyright {
-      border-top: 1px solid #d9cecc;
-      padding-top: 20px;
-      margin-top: 25px;
-      font-size: 13px;
-    }
-    
-    .hero-title-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 24px;
-    }
-
-    .hero-logo {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      object-fit: cover;
-      background: white;
-      border: 3px solid white;
-      flex-shrink: 0;
-    }
-
-    @media (max-width: 720px) {
-      .hero-title-row {
-      gap: 12px;
-      }
-
-    .hero-logo {
-      width: 70px;
-      height: 70px;
-      }
-    }
-
   </style>
 </head>
-
-
 <body>
   <header>
     <div class="shell header-inner">
@@ -121,11 +72,13 @@
   </header>
   <section class="hero" aria-labelledby="hero-title">
     <div class="shell">
-      <p class="eyebrow">早稲田大学</p>
       <div class="hero-title-row">
         <img src="みん犬.jpeg" alt="民法研究会のマスコット" class="hero-logo">
- 　　　　 <h1 id="hero-title">民法研究会</h1>
-　　　　</div>
+        <div class="hero-title-text">
+          <p class="eyebrow">早稲田大学</p>
+          <h1 id="hero-title">民法研究会</h1>
+        </div>
+      </div>
     </div>
   </section>
   <main class="shell">
@@ -163,7 +116,7 @@
       <h2>早稲田大学 民法研究会</h2>
       <p>お問い合わせ・公式SNS</p>
       <div class="footer-links">
-        <a href="minken2020.waseda@gmail.com">✉ メール</a>
+        <a href="mailto:minken2020.waseda@gmail.com">✉ メール</a>
         <a href="https://x.com/USERNAME" target="_blank" rel="noopener noreferrer">X（旧Twitter）</a>
         <a href="https://www.instagram.com/USERNAME/" target="_blank" rel="noopener noreferrer">Instagram</a>
       </div>
