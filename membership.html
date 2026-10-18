@@ -3,38 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="早稲田大学 民法研究会の入会案内ページです。">
+  <meta name="description" content="早稲田大学 民法研究会の入会費と入会手続きをご案内します。">
   <title>入会案内 | 早稲田大学 民法研究会</title>
   <style>
     :root { --primary:#8d1730; --deep:#531626; --ink:#292b31; --muted:#626772; --paper:#faf8f6; --white:#fff; --border:#e9e3e2; }
     * { box-sizing:border-box; }
     body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif; color:var(--ink); background:var(--paper); line-height:1.8; }
-    a { color:inherit; }
+    a { color:var(--primary); }
     .shell { width:min(1100px,calc(100% - 40px)); margin-inline:auto; }
     header { background:var(--white); border-bottom:1px solid var(--border); }
     .header-inner { min-height:80px; display:flex; gap:18px; justify-content:space-between; align-items:center; }
     .brand { font-weight:800; text-decoration:none; color:var(--deep); font-size:clamp(17px,2.4vw,22px); letter-spacing:.04em; }
     nav { display:flex; flex-wrap:wrap; column-gap:22px; row-gap:5px; font-size:14px; }
     nav a { text-decoration:none; color:#484148; }
-    nav a:hover,nav a:focus-visible { color:var(--primary); text-decoration:underline; }
+    nav a:hover, nav a:focus-visible { color:var(--primary); text-decoration:underline; }
     .hero { padding:38px 20px 42px; background:linear-gradient(130deg,#5d1428,#971a38); color:white; text-align:center; }
     .hero h1 { margin:0; font-size:clamp(28px,4.5vw,42px); letter-spacing:.06em; line-height:1.45; }
     main { padding:50px 0 75px; }
     .content { max-width:850px; margin:0 auto; }
     .panel { background:white; border:1px solid var(--border); border-radius:14px; padding:30px; margin-bottom:22px; }
-    h2 { color:var(--deep); font-size:clamp(20px,2.6vw,26px); margin:0 0 14px; }
-    h3 { color:var(--deep); font-size:19px; margin:0 0 12px; }
+    h2 { color:var(--deep); font-size:clamp(22px,2.6vw,28px); margin:0 0 16px; }
+    h3 { color:var(--deep); font-size:20px; margin:0 0 10px; }
     p { margin:0 0 14px; }
     p:last-child { margin-bottom:0; }
-    .muted { color:var(--muted); }
-    .placeholder { border:1px dashed #b78d98; background:#fcf6f7; border-radius:8px; padding:16px; color:#704150; }
-    .placeholder a { color:var(--primary); }
-    .steps { padding-left:1.7em; margin:0; }
-    .steps li { padding:0 0 15px 6px; }
-    .steps li:last-child { padding-bottom:0; }
-    .fees { width:100%; border-collapse:collapse; margin:12px 0 18px; }
-    .fees th,.fees td { border:1px solid var(--border); padding:12px 16px; text-align:left; }
+    .fees { width:100%; border-collapse:collapse; margin:8px 0 0; }
+    .fees th, .fees td { border:1px solid var(--border); padding:13px 16px; text-align:left; }
     .fees th { background:#f7f0f2; color:var(--deep); }
+    .steps { list-style:none; counter-reset:step; margin:0; padding:0; }
+    .steps > li { counter-increment:step; padding:24px 0; border-top:1px solid var(--border); }
+    .steps > li:first-child { padding-top:0; border-top:0; }
+    .steps > li:last-child { padding-bottom:0; }
+    .steps h3::before { content:counter(step) "、"; }
+    .important { color:#145aa4; font-weight:800; background:#eef6ff; border-left:4px solid #2774bb; padding:12px 14px; border-radius:4px; }
+    .account { background:#f8f5f5; border:1px solid var(--border); border-radius:10px; padding:18px 20px; margin-top:18px; }
+    .account-title { color:var(--deep); font-weight:800; margin-bottom:8px; }
+    .account p { margin:0; }
+    .form-link { display:inline-block; background:var(--primary); color:white; text-decoration:none; font-weight:700; border-radius:8px; padding:11px 20px; margin:5px 0 16px; }
+    .form-link:hover, .form-link:focus-visible { background:var(--deep); }
     .back { display:inline-block; color:var(--primary); font-weight:700; margin-top:10px; text-decoration:none; }
     .back:hover { text-decoration:underline; }
     footer { background:#f0ebea; padding:40px 20px 25px; text-align:center; color:#626772; font-size:13px; }
@@ -43,7 +48,14 @@
     .footer-links a { color:#8d1730; font-size:15px; font-weight:600; text-decoration:none; }
     .footer-links a:hover { text-decoration:underline; }
     .copyright { border-top:1px solid #d9cecc; padding-top:20px; margin-top:25px; font-size:13px; }
-    @media(max-width:720px) { .header-inner { padding:16px 0; flex-direction:column; gap:7px; } nav { justify-content:center; column-gap:16px; font-size:12px; } .hero { padding:32px 15px 36px; } main { padding:35px 0 55px; } .panel { padding:22px 18px; } .fees th,.fees td { padding:10px; } }
+    @media (max-width:720px) {
+      .header-inner { padding:16px 0; flex-direction:column; gap:7px; }
+      nav { justify-content:center; column-gap:16px; font-size:12px; }
+      .hero { padding:32px 15px 36px; }
+      main { padding:35px 0 55px; }
+      .panel { padding:22px 18px; }
+      .fees th, .fees td { padding:10px; }
+    }
   </style>
 </head>
 <body>
@@ -54,7 +66,7 @@
         <a href="index.html">ホーム</a>
         <a href="activities.html">活動内容</a>
         <a href="mock-trial.html">模擬裁判について</a>
-        <a href="membership.html">入会案内</a>
+        <a href="membership.html" aria-current="page">入会案内</a>
         <a href="shinkan.html">新歓について</a>
       </nav>
     </div>
@@ -65,20 +77,51 @@
   <main class="shell">
     <div class="content">
       <section class="panel">
-        <h2>入会方法</h2>
-        <ol class="steps">
-          <li><strong>入会期間を選ぶ</strong><br>1年間または2年以上の入会区分を選び、入会費をご確認ください。</li>
-          <li><strong>指定の銀行口座に入会費を振り込む</strong><br>下記の入会費を指定口座へお振り込みください。</li>
-        </ol>
-      </section>
-      <section class="panel">
         <h2>入会費</h2>
         <table class="fees">
-          <thead><tr><th scope="col">入会区分</th><th scope="col">入会費</th></tr></thead>
-          <tbody><tr><td>1年間</td><td>1,000円</td></tr><tr><td>2年以上</td><td>2,500円</td></tr></tbody>
+          <thead><tr><th scope="col">入会期間</th><th scope="col">入会費</th></tr></thead>
+          <tbody>
+            <tr><td>1年間</td><td>1,000円</td></tr>
+            <tr><td>2年以上</td><td>2,500円</td></tr>
+          </tbody>
         </table>
-        <h3>振込先</h3>
-        <div class="placeholder">銀行名・支店名・口座種別・口座番号・口座名義は、確認後に掲載してください。</div>
+      </section>
+
+      <section class="panel">
+        <h2>入会の流れ</h2>
+        <ol class="steps">
+          <li>
+            <h3>入会費を振込</h3>
+            <p>民法研究会の口座に、上記の入会金をお振り込みください。</p>
+            <p class="important">その際に、必ず振込後の確認画面など、入金が完了したことを証明できる画面をスクリーンショット等で保存してください。</p>
+            <div class="account">
+              <p class="account-title">【民法研究会口座】</p>
+              <p>りそな銀行 早稲田支店</p>
+              <p>科目　普通預金</p>
+              <p>店番　420</p>
+              <p>口座番号　1440843</p>
+              <p>口座名義　早稲田大学民法研究会</p>
+            </div>
+          </li>
+          <li>
+            <h3>入会フォームに入力</h3>
+            <p>下記の入会フォームに必要事項を入力してください。</p>
+            <p class="important">「振込を証明できる写真、PDFなどを添付してください。」という項目で、入金時に保存した入金を証明できる写真等を必ず添付してください。</p>
+            <a class="form-link" href="https://forms.gle/9cdzKAVQ1ArCNNrN8" target="_blank" rel="noopener noreferrer">入会フォームはこちら →</a>
+          </li>
+          <li>
+            <h3>LINEグループに入る</h3>
+            <p>フォームを送信すると、登録したメールアドレス宛にLINEグループの招待URLが送信されます。</p>
+            <p>メールを確認した上、グループへお入りください。</p>
+            <p>（イベント等各種連絡はLINEグループにて行います。）</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>その他・お問い合わせ</h2>
+        <p>上記の手続きにご不明な点がある場合、メールが届かない場合には下記のメールアドレスまでご連絡ください。</p>
+        <p><a href="mailto:minken2020.waseda@gmail.com">minken2020.waseda@gmail.com</a></p>
       </section>
       <a class="back" href="index.html">← トップページに戻る</a>
     </div>
